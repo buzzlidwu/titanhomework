@@ -1,0 +1,27 @@
+﻿@model IEnumerable<HomeWork.Models.Detail>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cost)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                Html.RenderPartial($"_DetailData", item);
+            }
+
+        </table>
+    </div>
+</div>

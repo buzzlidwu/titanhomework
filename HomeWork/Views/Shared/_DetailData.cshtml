@@ -1,0 +1,16 @@
+﻿@model HomeWork.Models.Detail
+
+<tr>
+    <td>
+        @Html.DisplayFor(model => model.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(model => model.Type)
+    </td>
+    <td>
+        @Html.DisplayFor(model => model.DateTime)
+    </td>
+    <td>
+        @Model.Cost.ToString("#,0")
+    </td>
+</tr>
